@@ -1,1 +1,13 @@
+; --- Matrix Rain Concept ---
+mov x 1
+mov y 1
 
+:RAIN
+    pxl x y 42
+    add x x 3
+    add y y 1
+    if x > 50 mov x 1
+    if y > 20 mov y 1
+    
+    sleep 10
+    goto :RAIN
