@@ -1,4 +1,4 @@
-# ASM+ Programming Language
+# 🚀 ASM+ Programming Language
 
 **ASM+** is a custom, low-level interpreted programming language written in C++. It is designed to bridge the gap between assembly-like syntax and functional high-level logic, providing direct access to memory and real-time console graphics.
 
@@ -9,7 +9,7 @@ The interpreter simulates a simplified CPU environment with two primary memory s
 
 ---
 
-##  Language Reference (Full Instruction Set)
+## 📚 Language Reference (Full Instruction Set)
 
 ### 1. Data Manipulation
 | Instruction | Syntax | Description |
@@ -51,7 +51,5 @@ The interpreter simulates a simplified CPU environment with two primary memory s
 | **SIN** | `SIN <v> <deg> <s>` | Calculate Sine of `deg` scaled by `s`. |
 | **COS** | `COS <v> <deg> <s>` | Calculate Cosine of `deg` scaled by `s`. |
 
----
-
-## Coding in ASM+
-ASM+ allows for complex logic implementation.
+GTB is_wall idx
+if is_wall == 1 goto :COLLISION_DETECTED
