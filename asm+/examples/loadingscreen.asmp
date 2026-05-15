@@ -1,1 +1,16 @@
+; --- ASM+ loading Demo ---
+mov x 1
+mov limit 40
 
+:LINE_LOOP
+    cls
+    print loading in ASM+...
+    pxl x 5 61
+    
+    add x x 1
+    sleep 50
+    
+    if x < limit goto :LINE_LOOP
+
+cls
+print loading Complete. No errors found.
