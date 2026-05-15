@@ -1,0 +1,59 @@
+; --- ИНИЦИАЛИЗАЦИЯ (ОБЯЗАТЕЛЬНО) ---
+mov px 50
+mov py 50
+mov pa 5
+
+:GAME_LOOP
+; 1. СРАЗУ ПРОВЕРЯЕМ КНОПКИ
+KEY k_w 87
+KEY k_a 65
+KEY k_d 68
+
+if k_w == 1 add py py 5
+if k_a == 1 sub pa pa 1
+if k_d == 1 add pa pa 1
+
+; 2. ОГРАНИЧЕНИЯ (чтобы не вылететь из таблицы синусов)
+if pa < 0 mov pa 0
+if pa > 18 mov pa 18
+
+; 3. УЛЬТРА-БЫСТРЫЙ РЕНДЕР (Всего 8 полосок)
+CLS
+print POS: %px%:%py% | ANGLE: %pa%
+mov col 0
+
+:FAST_RENDER
+    add c_a pa col
+    sub c_a c_a 4 ; Смещение для FOV
+    
+    if c_a < 0 mov c_a 0
+    if c_a > 18 mov c_a 18
+
+    add addr 500 c_a
+    mov s [addr]
+    
+    ; Упрощенный луч (всего 5 шагов вперед)
+    mov d 1
+    :STEP
+        mul dx d s
+        div dx dx 10
+        add tx px dx
+        div mx tx 10
+        
+        ; Проверка только одной оси для теста
+        if mx > 12 goto :HIT
+        add d d 1
+        if d < 10 goto :STEP
+        goto :SKY
+
+    :HIT
+        PXL col 10 35 ; Рисуем только одну точку стены
+        goto :NEXT
+    :SKY
+        PXL col 10 46
+:NEXT
+    add col col 1
+    if col < 8 goto :FAST_RENDER
+
+SLEEP 10
+goto :GAME_LOOP
