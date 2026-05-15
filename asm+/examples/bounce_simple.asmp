@@ -1,1 +1,19 @@
+; --- Simple Bounce Demo ---
+mov x 5
+mov dir 1
 
+:MAIN
+    cls
+    pxl x 10 79
+    add x x dir
+    if x == 30 goto :LEFT
+    if x == 5 goto :RIGHT
+    goto :MAIN
+
+:LEFT
+    mov dir -1
+    goto :MAIN
+
+:RIGHT
+    mov dir 1
+    goto :MAIN
