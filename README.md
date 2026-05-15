@@ -50,6 +50,3 @@ The interpreter simulates a simplified CPU environment with two primary memory s
 | :--- | :--- | :--- |
 | **SIN** | `SIN <v> <deg> <s>` | Calculate Sine of `deg` scaled by `s`. |
 | **COS** | `COS <v> <deg> <s>` | Calculate Cosine of `deg` scaled by `s`. |
-
-GTB is_wall idx
-if is_wall == 1 goto :COLLISION_DETECTED
