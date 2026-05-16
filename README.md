@@ -60,4 +60,4 @@ The interpreter simulates a simplified CPU environment with two primary memory s
 
 
 ## 🤔 tutorial for language
-### Various types of tutorials will be released on my channel or on my website.
+### Various types of tutorials and another operators will be released on my channel or on my website.
