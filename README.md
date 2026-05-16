@@ -44,9 +44,20 @@ The interpreter simulates a simplified CPU environment with two primary memory s
 | **KEY** | `KEY <var> <code>` | Sets `<var>` to 1 if key `code` is pressed, else 0. |
 | **PRINT**| `PRINT <text> %v%` | Output text to console with variable interpolation. |
 | **SLEEP**| `SLEEP <ms>` | Pause execution for `<ms>` milliseconds. |
+| **COLOR**| `COLOR <color Id>`| Changes color of text with `<color Id>`. |
 
 ### 5. Advanced Math
 | Instruction | Syntax | Description |
 | :--- | :--- | :--- |
-| **SIN** | `SIN <v> <deg> <s>` | Calculate Sine of `deg` scaled by `s`. |
-| **COS** | `COS <v> <deg> <s>` | Calculate Cosine of `deg` scaled by `s`. |
+| **SIN** | `SIN <var> <deg> <s>` | Calculate Sine of `deg` scaled by `s`. |
+| **COS** | `COS <var> <deg> <s>` | Calculate Cosine of `deg` scaled by `s`. |
+
+### 6. Sounds
+| Instruction | Syntax | Description |
+| :--- | :--- | :--- |
+| **BEEP** | `BEEP <hz> <dur>` | Plays sound like a beep.|
+
+
+
+## 🤔 tutorial for language
+### Various types of tutorials will be released on my channel or on my website.
